@@ -1,0 +1,30 @@
+
+<div class="card">
+    <div class="card-header">
+        Column Data : 
+    </div>
+    <div class="card-body">
+    <div *ngFor="let d of data; let i=index">
+        <div *ngIf="d" class="row">
+    
+            <div class="col-3"> {{d}} </div>
+            <div class="col-7">
+                <input class="form-control" required type="text" [(ngModel)]="items[i]">
+            </div>
+            <div class="col-2">
+                <input class="btn btn-danger" type="button" value="delete" (click)="delete(d)"> </div>
+    
+        </div>
+        <br>
+    </div>
+    
+    <input type="button" class="btn btn-info" style=" margin:auto" value="send to table" (click)="sendToC3()">
+
+
+
+    </div>
+    
+</div>
+<br>
+
+<app-table [data]="data" [items]="items" [tableData]="tableData"> </app-table>

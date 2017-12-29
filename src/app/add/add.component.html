@@ -1,0 +1,26 @@
+
+<div class="card">
+    <div class="card-header">
+        Add a column :
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="row card">
+                <div class="input-group">
+                    <input type="text" class="form-control" required placeholder="Add..." [(ngModel)]="value" name="column" aria-label="Search for..."
+                    />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" (click)="myMethod()" type="button"> Add !</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<br>
+
+<app-element [data]="data"></app-element>
+   
+
+

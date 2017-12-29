@@ -1,0 +1,37 @@
+
+
+<div class="card" >
+  <div class="card-header">
+     Example Output 
+  </div>
+  <div class="card-body">
+   
+<table  id="tbl" class="table  table-bordered ">
+  <thead> 
+  <tr class="table-active">
+    <th *ngFor="let d of data; let i=index">
+      <span *ngIf="d">{{d}}</span>
+
+    </th>
+    <td></td>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let td of tableData" >
+    <td *ngFor="let i of td">
+      <input class="form" style="border: none" type="text" value="{{i}}" />
+    </td>
+    <td>
+      <input type="button" value="X" class="btn btn-danger" (click)="deleteRow(td)">
+    </td>
+  </tr>
+</tbody>
+
+</table>
+
+<input type="button" class="btn btn-info" value="Data to csv"  (click)="export()" >
+
+
+</div>
+</div>
+
